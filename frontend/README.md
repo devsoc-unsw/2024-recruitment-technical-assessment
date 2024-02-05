@@ -1,6 +1,6 @@
 # DevSoc 2024 Subcommittee Recruitment Frontend Technical
 
-## Overview and expectations
+## Overview and Expectations
 
 - You will be given an image of a website. **Your goal is to recreate this image as a page**.
 - You can (and we would prefer) that you implement your solution in this directory, though you may choose to create your own repository
@@ -13,7 +13,7 @@
 
 ![Unilectives](./Unilectives.png)
 
-An image of the [Unilectives](https://unilectives.csesoc.app/) site is provided above.
+An image of the [Unilectives](https://unilectives.devsoc.app/) site is provided above.
 
 ### Main Task
 
@@ -42,8 +42,8 @@ The [Unilectives](./assets/unilectives.svg) icon has been provided as an `svg`. 
   - user-circle
   - moon
   - arrow-right-end-on-rectangle
-- Course cards
-  - star: ★
+- Course cards:
+  - star: `★` (plain text)
 
 Partially coloured stars are not a requirement for this task but you are welcome make an attempt.
 
@@ -53,7 +53,7 @@ The goal of this part is for you to demonstrate component state management. Plea
 
 ### Stretch Task 2
 
-The goal of this part is for you to demonstrate interation with your site. Please make the search bar clickable. Upon being clicked, a `div` should appear. The `div` should be any simple, blank white box with a black outline, vertically and horizontally centred on top of the content of the page. The `div` should contain in it, another button to dismiss the `div`.
+The goal of this part is for you to demonstrate iteration with your site. Please make the search bar clickable. Upon being clicked, a `div` should appear. The `div` should be any simple, blank white box with a black outline, vertically and horizontally centred on top of the content of the page. The `div` should contain in it, another button to dismiss the `div`.
 
 ## Submission
 
