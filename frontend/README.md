@@ -53,7 +53,7 @@ The goal of this part is for you to demonstrate component state management. Plea
 
 ### Stretch Task 2
 
-The goal of this part is for you to demonstrate iteration with your site. Please make the search bar clickable. Upon being clicked, a `div` should appear. The `div` should be any simple, blank white box with a black outline, vertically and horizontally centred on top of the content of the page. The `div` should contain in it, another button to dismiss the `div`.
+The goal of this part is for you to demonstrate interaction with your site. Please make the search bar clickable. Upon being clicked, a `div` should appear. The `div` should be any simple, blank white box with a black outline, vertically and horizontally centred on top of the content of the page. The `div` should contain in it, another button to dismiss the `div`.
 
 ## Submission
 
