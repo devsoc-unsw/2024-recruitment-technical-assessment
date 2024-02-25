@@ -1,2 +1,9 @@
 Please detail the instructions to view your solution here:
 
+in the frontend directory run the command
+npm install --global http-server
+then run the command 
+npx http-server ./ -p 8080 
+and use the given available links to access
+
+this is just to get the cors error to stop showing...

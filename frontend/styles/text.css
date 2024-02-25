@@ -1,0 +1,59 @@
+#devsoc {
+    font-size: 15px;
+}
+#title {
+    font-size: 60px;
+    color: blue;
+    margin: 10px 0px;
+    font-weight: 700;
+}
+#desc {
+    font-size: 15px;
+    font-weight: bold;
+}
+#search-bar-container {
+    width: 100%;
+    padding: 12px 70px 12px 0px;
+    box-sizing: border-box;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px 20px;
+    padding-left: 60px;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 20px;
+    background-image: url('../assets/magnify.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border-color: blue;
+}
+
+.search-bar::placeholder {
+    color: blue;
+}
+
+.sort-box {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid black;
+    font-size: 16px;
+    width: auto;
+    max-width: 200px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: grey;
+}
+
+.sort-box::after {
+    margin-left: 90px;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-image: url('../assets/down.svg');
+    background-size: cover;
+}

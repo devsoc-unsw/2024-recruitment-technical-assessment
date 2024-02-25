@@ -1,0 +1,59 @@
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px 0px;
+  padding-right: 70px;
+}
+
+.rectangle {
+  height: 150px;
+  position: relative;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.full-name {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 27px;
+}
+
+.star-rating {
+  position: absolute;
+  top: 27px;
+  right: 30px;
+  font-size: 25px;
+  color: purple;
+}
+
+.reviews {
+  font-size: 10px;
+  color: grey;
+}
+
+.term-container {
+  display: flex;
+}
+
+.term {
+  width: 50px; /* Adjusted width to accommodate text */
+  height: 25px; /* Adjusted height for better oval shape */
+  background-color: lightblue;
+  margin-right: 5px;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px; /* Adjusted font size for text fit */
+}

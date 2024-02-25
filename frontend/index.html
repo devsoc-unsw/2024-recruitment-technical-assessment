@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Left Sidebar Navbar</title>
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/text.css">
+  <link rel="stylesheet" href="styles/courses.css">
+</head>
+<body>
+  <nav id="sidebar">
+    <div id="logo-holder">
+      <img src="assets/unilectives.svg" alt="logo" id="logo">
+    </div>
+    <div id="top-icons">
+      <div id="line"></div>
+      <ul>
+        <li><img src="assets/book.svg" alt="logo" class="icon"></li>
+        <li><img src="assets/shield.svg" alt="logo" class="icon"></li>
+      </ul>
+    </div>
+    <div id="bottom-icons">
+      <ul>
+        <li><img src="assets/bars.svg" alt="logo" id="bars"></li>
+        <li><img src="assets/user.svg" alt="logo" class="icon"></li>
+        <li><img src="assets/moon.svg" alt="logo" class="icon"></li>
+        <li><img src="assets/arrow.svg" alt="logo" class="icon"></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main-content">
+    <p id="devsoc">DevSoc presents</p>
+    <p id="title">unilectives</p>
+    <p id="desc">Your one-stop shop for UNSW course and elective reviews.</p>
+    <div id="search-bar-container">
+      <input type="text" class="search-bar" placeholder="Search for a course e.g. COMP1511">
+      <div class="sort-box">Sort by</div>
+    </div>
+
+    <div id="grid-container">
+    </div>
+  </div>
+  <script src="scripts/courseparse.js"></script>
+</body>
+</html>
