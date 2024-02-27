@@ -11,23 +11,96 @@ type FileData = {
  * Task 1
  */
 function leafFiles(files: FileData[]): string[] {
-    return [];
+    let parentFiles: number[] = [];
+    // compile a list of parent files
+    for (const file of files) {
+        if (file.parent != -1) {
+            parentFiles.push(file.id);
+        }
+    }
+    // make a list of leaf file, i.e. list of all files that are not parent files
+    let leafFiles: FileData[] = files;
+    for (const file of leafFiles) {
+        for (const parentFile of parentFiles) {
+            if (file.id === parentFile) {
+                leafFiles = leafFiles.filter(file => file.id !== parentFile);
+            }
+        }
+    }
+    let leafFilesNames: string[] = [];
+    for (const file of leafFiles) {
+        leafFilesNames.push(file.name);
+    }
+    return leafFilesNames;
 }
 
 /**
  * Task 2
  */
 function kLargestCategories(files: FileData[], k: number): string[] {
-    return [];
+    // map to store category frequency and sizes
+    const catMap: Map<string, { count: number, size: number }> = new Map();
+
+    for (const file of files) {
+        for (const category of file.categories) {
+            if (!catMap.has(category)) {
+                catMap.set(category, { count: 0, size: 0 });
+            }
+            // idk why the next two lines are returning undefined
+            // catMap.get(category).count++;
+            // catMap.get(category).size += file.size;
+        }
+    }
+
+    // convert map into sorted array
+    const sortedCategories = Array.from(catMap.entries())
+        .sort((a, b) => {
+            // Sort by size in descending order
+            if (a[1].size !== b[1].size) {
+                return b[1].size - a[1].size;
+            } else {
+                // If sizes are equal, sort alphabetically
+                return a[0].localeCompare(b[0]);
+            }
+        })
+        .map(entry => entry[0]);
+    return sortedCategories.slice(0, k);
+
 }
 
 /**
  * Task 3
  */
 function largestFileSize(files: FileData[]): number {
-    return 0;
+    if (files.length === 0) {
+        return 0;
+    }
+
+    let maxFileSize = 0;
+
+    for (const file of files) {
+        const totalSize = parentFileSize(file, files);
+        // new largest file size replaces old largest file size
+        if (totalSize > maxFileSize) {
+            maxFileSize = totalSize;
+        }
+    }
+
+    return maxFileSize;
 }
 
+
+function parentFileSize(file: FileData, files: FileData[]): number {
+    let totalSize = file.size;
+    
+    // recursively add children file sizes
+    const children = files.filter(f => f.parent === file.id);
+    for (const child of children) {
+        totalSize += parentFileSize(child, files);
+    }
+
+    return totalSize;
+}
 
 function arraysEqual<T>(a: T[], b: T[]): boolean {
     if (a === b) return true;
